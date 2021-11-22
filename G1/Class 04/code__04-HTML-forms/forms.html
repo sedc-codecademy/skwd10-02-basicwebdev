@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        
+        <!-- Form 01 - Login Form -->
+        <form action="" method="post">
+            <!-- text input -->
+            <label for="user">Username:</label>
+            <input type="text" name="username" id="user" />
+            <!-- password input -->
+            <label for="pass">Password:</label>
+            <input type="password" name="password" id="pass" />
+            <!-- submit input -->
+            <input type="submit" value="Log In" />
+        </form>
+
+        <br />
+        <br />
+
+        <!-- Form 02 - Message -->
+        <form action="" method="post">
+            <!-- textarea -->
+            <label for="story">Tell us your story:</label><br />
+            <textarea name="message" id="story" cols="40" rows="10"></textarea><br />
+            <!-- submit input / button -->
+            <button type="submit">Send Message</button>
+        </form>
+
+
+        <!-- Form 03 - Music -->
+        <form action="" method="post">
+            <!-- radio inputs -->
+            <p>Please select your favorite music genre:</p>
+
+            <input type="radio" name="music-genre" id="rock" value="Rock" />
+            <label for="rock">Rock</label>
+            <input type="radio" name="music-genre" id="pop" value="Pop" />
+            <label for="pop">Pop</label>
+            <input type="radio" name="music-genre" id="jazz" value="Jazz" />
+            <label for="jazz">Jazz</label>
+
+            <!-- checkbox -->
+            <p>Please select your favorite music streaming service(s):</p>
+
+            <input type="checkbox" name="service" id="apple" value="AppleMusic" />
+            <label for="apple">AppleMusic</label>
+            <input type="checkbox" name="service" id="google" value="GoogleMusic" />
+            <label for="google">GoogleMusic</label>
+
+            <br />
+            <br />
+
+            <!-- select -->
+            <label for="devices">What device do you listen to music on?</label>
+            <select name="device" id="devices">
+                <option value="" selected disabled>Please select</option>
+                <option value="Phone">Phone</option>
+                <option value="Desktop">Desktop PC</option>
+                <option value="RecordPlayer">Record Player</option>
+            </select>
+
+
+            <br />
+            <br />
+
+            <!-- multiple select element -->
+            <label for="instruments">Do you play any of these instruments?</label>
+            <select name="instruments" id="instruments" multiple>
+                <option value="Guitar">Guitar</option>
+                <option value="Drums">Drums</option>
+                <option value="Keyboard">Keyboard</option>
+                <option value="Bass">Bass</option>
+            </select>
+
+            <br />
+            <br />
+
+            <!-- submit -->
+            <button type="submit">Send</button>
+        </form>
+
+    </body>
+</html>
