@@ -54,5 +54,50 @@
             <option> Kumanovo </option>
         </select>
     </form>
+    <br/>
+    <!-- multi dropdown/select-->
+    <form>
+        <label for="mcities"> Cities:</label>
+        <select id="mcities" size="6" multiple>
+            <!-- <option> Select city: </option> -->
+            <option value="sk"> Skopje </option>
+            <option value="bt"> Bitola </option>
+            <option> Prilep </option>
+            <option> Kicevo </option>
+            <option selected> Veles </option>
+            <option> Strumica </option>
+            <option> Krusevo </option>
+            <option> Ohrid </option>
+            <option> Kumanovo </option>
+    </select>
+    </form>
+    <!-- upload file-->
+    <form>
+        <label for="profile-img"> Upload image </label>
+        <input type="file" id="profile-img"/>
+    </form>
+    <!-- submit button -->
+    <form action="Input">
+        <label for="email"> Email </label>
+        <input type="email" id="email" placeholder="Enter your email"/>
+        <input type="submit" value="Send"/>
+    </form>
+    <!-- button -->
+    <form>
+        <button> click me </button>
+        <input type="hidden"/>
+    </form> 
+    <!-- grouping form elements and validation -->
+    <form>
+        <fieldset>
+            <legend> Contact details </legend>
+            <label for="name"> Name </label>
+            <input type="text" required id="name"/>
+            <label for="email"> Email </label>
+            <input type="email" required id="email">
+            <input type="date">
+            <input type="submit">
+        </fieldset>
+    </form>
 </body>
 </html>
