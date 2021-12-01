@@ -1,0 +1,26 @@
+* {
+    color: rgb(39, 228, 15);
+}
+
+.label {
+    color: #ee3e80;
+}
+
+.label.two {
+    color: darkblue;
+}
+
+#btn {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+p {
+    /* background-color: #3e0653; */
+    background-color: hsla(0,100%,78%,0.9);
+}
+
+span {
+    background-color: blue;
+    color: burlywood;
+}
