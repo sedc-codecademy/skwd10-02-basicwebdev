@@ -1,0 +1,51 @@
+/* * {
+  color: red;
+} */
+
+body {
+  background-color: bisque;
+}
+h1 {
+  font-size: "42px";
+  color: blue;
+  font-family: fantasy;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: medium;
+}
+
+.red-color {
+  color: red;
+}
+
+p.red-color {
+  font-size: 24px;
+}
+
+#p1 {
+  font-size: larger;
+}
+#container {
+  background-color: yellow;
+}
+
+/* #container > p {
+  color: blue;
+} */
+
+#container p {
+  color: blue;
+}
+
+#p1 + p {
+  font-size: 48px;
+}
+
+#p3 + div {
+  background-color: orange;
+}
+
+#p4 ~ div {
+  background-color: orchid;
+}

@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+
+p {
+  font-stretch: expanded;
+  font-weight: bold;
+  font-style: italic;
+}

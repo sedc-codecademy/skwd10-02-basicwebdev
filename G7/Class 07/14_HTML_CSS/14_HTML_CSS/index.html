@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML and CSS</title>
+
+		<meta name="description" content="HTML and CSS Presentation">
+		<meta name="author" content="SEDC">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="assets/css/reveal.css">
+		<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'assets/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			<section>
+
+				<!-- Slide 1 -->
+				<section style="text-align: left;">
+					<h1>HTML5 &amp; CSS3</h1>
+					<h3>CSS</h3>
+					<p>
+						<small>Trainer: <a href="https://www.linkedin.com/in/bojan-zdravkovski-2a355277/">Bojan Zdravkovski</a> - bojan.zdravkovski@gmail.com</small></br>
+						<small>Assistant: <a href="https://www.linkedin.com/in/borche-borisovski-56921b220/">Borche Borisovski</a> - borisovski.borce@gmail.com</small></br>
+						<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" />
+						
+					</p>
+					<small style="font-size: 15px;">© 2021/2022 Seavus Education &amp; Development Center</small>
+				</section>
+
+
+				<!-- Slide 2 -->
+				<section style="text-align: left;">
+					<h2>Lesson overview</h2>
+					<ul>
+						<li>Block and Inline boxes</li>
+						<li>Box Model in CSS</li>
+						<li>Margins, Paddings, Borders</li>
+						<li>The Box Model and Inline boxes</li>
+						<li>Overflow</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 3 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Block and Inline boxes</h1>
+				</section>
+
+
+
+				<!-- Slide 04 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Block</strong> &amp; <strong style="color:#007ac9;">Inline</strong> boxes</h2>
+					<ul>
+						<li>Everything in CSS has a box around it, 
+							and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items.</li>
+						<li>In this lesson, we will take a proper look at the CSS Box Model so that you can build more complex 
+							layout tasks with an understanding of how it works and the terminology that relates to it.</li>
+					</ul>
+				</section>
+
+
+				<!-- Slide 05 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Block</strong> &amp; <strong style="color:#007ac9;">Inline</strong> boxes (2)</h2>
+					<ul>
+						<li>In CSS we broadly have two types of boxes<br /> — <b>block boxes</b> and <b>inline boxes.</b><br /><br />
+						<small>*These characteristics refer to how the box behaves in terms of page flow, 
+							<br />and in relation to other boxes on the page</small></li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 06 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Block</strong> boxes</h2>
+					<p>If a box is defined as a <b>block</b>, it will behave in the following ways:</p>
+					<ul>
+						<li>The box will break onto a new line</li>
+						<li>The box will extend in the inline direction to fill the space available in its container. 
+							<small>*In most cases this means that the box will become as wide as its container, 
+								<br />filling up 100% of the space available</small>
+						</li>
+						<li>The <b>width</b> and <b>height</b> properties are respected</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 07 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Inline</strong> boxes</h2>
+					<p>If a box has an outer display type of <b>inline</b>, it will behave in the following ways:</p>
+					<ul>
+						<li>The box will not break onto a new line</li>
+						<li>The <b>width</b> and <b>height</b> properties will not apply</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 07.1 -->
+				<section>		
+					<div class="sl-block" data-block-type="image" style="width: 80%; height: 80%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/inline_vs_block.png"></div>
+					</div>
+				</section>
+
+
+
+				<!-- Slide 08 -->
+				<section style="text-align: left;">
+					<p>The type of box applied to an element is defined by <strong style="color:#007ac9;">display</strong> 
+						property values such as <b>block</b> and <b>inline</b>, 
+						and relates to the <b>outer value of display.</b></p>
+				</section>
+
+
+
+				<!-- Slide 09 -->
+				<section style="text-align: left;">
+					<p>
+						Boxes in CSS have an <strong style="color:#007ac9;">outer display type</strong>, 
+						which details whether the box is <b>block</b> or <b>inline.</b>
+					</p>
+					<p>
+						Boxes also have an <strong style="color:#007ac9;">inner display type</strong>, however, 
+						which dictates how elements inside that box are laid out.<br />
+						<small>*By default, the elements inside a box are laid out in normal flow, 
+							which means that they behave just like any other block and inline elements (as explained previously).</small>
+					</p>
+					<p>
+						We can, however, change the <b>inner display type</b> by using <b>display values</b> like <b>flex</b>. 
+						<small>*If we set display: flex; on an element, the outer display type is block, but the inner display type is changed to flex. Any direct children of this box will become 
+						flex items and will be laid out according to the rules set out in the Flexbox definition, which we'll learn about later on.</small>
+					</p>
+				</section>
+
+
+
+				<!-- Slide 10 -->
+				<section style="text-align: left;">
+					<p>
+						Block and inline layout is the default way that things on the web behave, 
+						it is sometimes referred to as <b>normal flow</b>, because without any other instruction, 
+						our boxes lay out as <b>block</b> or <b>inline</b> boxes.</b>
+					</p>
+				</section>
+
+
+
+
+				<!-- Slide 11 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Box Model</strong> in CSS</h2>
+					<ul>
+						<li>The full CSS box model applies to <b>block boxes</b>, <b>inline boxes</b> only use some of the behavior defined in the box model</li>
+						<li> The model defines how the different parts of a box — <b>margin</b>, <b>border</b>, <b>padding</b>, and <b>content</b> — 
+							work together to create a box that you can see on the page</li>
+						<li>To add some additional complexity, there is a <b>standard</b> and an <b>alternate</b> box model</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 12 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Box Model</strong> in CSS (2)</h2>
+					<ul>
+						<li>Making up a block box in CSS we have the:</strong>
+							<ul>
+								<li><strong style="color:#007ac9;">Content box</strong>
+									<br /><small>The area where your content is displayed, which can be sized <br />using properties like <b>width</b> and <b>height.</b></small>
+								</li>
+								<li><strong style="color:#007ac9;">Padding box</strong>
+									<br /><small>The padding sits around the content as white space; <br />its size can be controlled using <b>padding</b> and related properties.</small>
+								</li>
+								<li><strong style="color:#007ac9;">Border box</strong>
+									<br /><small>The border box wraps the content and any padding. <br />Its size and style can be controlled using <b>border</b> and related properties.</small>
+								</li>
+								<li><strong style="color:#007ac9;">Margin box</strong>
+									<br /><small>The margin is the outermost layer, wrapping the content, padding and border as whitespace between this box and other elements. 
+										Its size can be controlled using <b>margin</b> and related properties.</small>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 13 -->
+				<section>		
+					<div class="sl-block" data-block-type="image" style="width: 80%; height: 80%;" data-block-id="">
+					    <div class="sl-block-content"><img src="assets/img/border.png"></div>
+					</div>
+				</section>
+
+
+
+
+				<!-- Slide 14 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Standard</strong> CSS box model</h2>
+					<p>In the standard box model, if you give a box a <b>width</b> and a <b>height</b> attribute, 
+						this defines the <b>width</b> and <b>height</b> of the <strong style="color:#007ac9;">content box.</strong></p>
+					<p><small>Any <b>padding</b> and <b>border</b> is then added to that width and height to get the total size taken up by the box.</small></p>
+					<div class="sl-block-content"><img src="assets/img/standard-box-model.png" width="40%"></div>
+				</section>
+
+
+
+
+				<!-- Slide 15 -->
+				<section style="text-align: left;">
+					<h2><strong style="color:#007ac9;">Alternative</strong> CSS box model</h2>
+					<p>It is rather inconvenient to have to add up the border and padding to get the real size of the box.
+						For this reason, CSS had an <b>alternative box model</b> introduced some time after the standard box model.
+					</p>
+					<p><small>Using this model, <b>any width</b> is the <b>width</b> of the <strong style="color:#007ac9;">visible box</strong> on the page, 
+						therefore the content area width is that width minus the width for the padding and border</small></p>
+					<div class="sl-block-content"><img src="assets/img/alternate-box-model.png" width="40%"></div>
+				</section>
+
+
+
+				<!-- Slide 16 -->
+				<section style="text-align: left;">
+					<p>By default, browsers use the <b>standard box model.</b></p>
+					<p>If you want to turn on the alternative model for an element you do so by setting <b>box-sizing: border-box</b> on it.
+					<small>*By doing this you are telling the browser to take the border box as the area defined by any size you set.</small></p>
+					<p><pre><code class="hljs" data-trim contenteditable>
+.box{
+	box-sizing: border-box;
+}
+					</code></pre></p>
+				</section>
+
+
+
+				<!-- Slide 17 -->
+				<section style="text-align: left;">
+					<p>If you want all of your elements to use the alternative box model, and this is a common scenario, 
+						set the <b>box-sizing</b> property on the &lt;html&gt; element, then set all other elements to <b>inherit</b> that value</p>
+					<p><pre><code class="hljs" data-trim contenteditable>
+html{
+	box-sizing: border-box;
+}
+
+*{
+	box-sizing: inherit;
+}
+					</code></pre></p>
+				</section>
+
+
+
+
+				<!-- Slide 18 -->
+				<section style="text-align: left;">
+					<p><b>NOTE:</b> The margin is not counted towards the actual size of the box. The box's area stops at the border — it does not extend into the margin.</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="assets/lib/js/head.min.js"></script>
+		<script src="assets/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				 // Transition speed
+    			transitionSpeed: 'default', // default/fast/slow
+
+				 // Enable slide navigation via mouse wheel
+    			mouseWheel: true,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'assets/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
