@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Meow+Script&display=swap");
+
+h1 {
+  font-family: "Luxurious Script";
+}
+
+h2 {
+  font-family: "Meow script";
+}
+
+p {
+  font-size: larger;
+}
+
+#container {
+  font-size: 24px;
+}
+
+#par1 {
+  font-size: 1rem;
+  font-style: oblique 50deg;
+}
+
+#par2 {
+  font-size: 3em;
+}
+
+#div1 {
+  font-size: x-large;
+}
+
+div {
+  border: 1px solid black;
+}
+#p2 {
+  font-size: x-large;
+}
+
+#p6 {
+  text-transform: capitalize;
+  /* text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(57, 187, 122);
+  text-decoration-thickness: 13px; */
+  text-decoration: dotted line-through red 3px;
+}
+
+#parent {
+  width: 200px;
+}
+
+#square1 {
+  width: 300px;
+  height: 50px;
+  background-color: aqua;
+}
+
+#square2 {
+  width: 50%;
+  height: 50px;
+  background-color: blueviolet;
+}
+
+#parent1 {
+  width: 700px;
+  height: 300px;
+}
+
+#square3 {
+  width: 50%;
+  height: 50%;
+  background-color: aqua;
+}
+
+#square4 {
+  height: 50vh;
+  width: 30vw;
+  background-color: royalblue;
+}
+
+#p7 {
+  line-height: 25px;
+  letter-spacing: 1px;
+  word-spacing: 20px;
+}
+
+#p8 {
+  text-align: end;
+}
+img {
+  vertical-align: middle;
+}
+
+#p9 {
+  text-shadow: 5px 5px 5px red;
+}
+
+#p9::first-line {
+  color: green;
+}
+
+#p9::first-letter {
+  font-size: 48px;
+}
+
+/* a:link {
+  color: greenyellow;
+}
+
+a:visited {
+  color: red;
+} */
+
+a:hover {
+  color: yellow;
+}
+a:focus {
+  color: sienna;
+}
+a:active {
+  color: pink;
+}
