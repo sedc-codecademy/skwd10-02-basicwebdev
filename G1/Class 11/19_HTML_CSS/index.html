@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML and CSS</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="assets/css/reveal.css">
+		<link rel="stylesheet" href="assets/css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'assets/text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			<section>
+
+				<!-- Slide 1 -->
+				<section style="text-align: left;">
+					<h1>HTML5 &amp; CSS3</h1>
+					<h3>CSS pseudo-classes and pseudo-elements</h3>
+					<p>
+						<small>Created by <a href="https://www.facebook.com/jane.dimeski1">Jane Dimeski</a> / <a href="http://twitter.com/janedimeski">@janedimeski</a></small></br>
+						<img src="assets/img/lg.png" alt="logo" style="border:none; box-shadow:none;" />
+						
+					</p>
+					<small style="font-size: 15px;">© 2021/2022 Seavus Education &amp; Development Center</small>
+				</section>
+
+
+				<!-- Slide 2 -->
+				<section style="text-align: left;">
+					<h2>Lesson Overview</h2>
+					<ul>
+						<li>What are Pseudo-Classes?</li>
+						<li>What are Pseudo-Elements?</li>
+						<li>::before</li>
+						<li>::after</li>
+						<li>::selection</li>
+						<li>::placeholder</li>
+						<li>:nth-child()</li>
+						<li>Vendor-Prefixes</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 3 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>Pseudo-Elements?</h1>
+				</section>
+
+
+				<!-- Slide 4 -->
+				<section style="text-align: left;">
+					<h2>What are Pseudo-Elements?</h2>
+					<ul>
+						<li>A CSS pseudo-element is used to style specified parts of an element.</li>
+						<li>For example, it can be used to:
+							<ul>
+								<li>Style the first letter, or line, of an element</li>
+								<li>Insert content before, or after, the content of an element</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+
+				<!-- Slide 5 -->
+				<section style="text-align: left;">
+					<h2>The syntax of pseudo-elements</h2>
+						<p><pre><code class="hljs" data-trim contenteditable>
+selector::pseudo-element {
+    property:value;
+}
+					</code></pre></p>
+				</section>
+
+
+				<!-- Slide 6 -->
+				<section style="text-align: left;">
+					<h2>What are Pseudo-Class?</h2>
+					<ul>
+						<li>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s).</li>
+						<li>For example, <b>:hover</b> can be used to change a button's color when the user's pointer hovers over it.</li>
+					</ul>
+				</section>
+
+
+				<!-- Slide 7 -->
+				<section style="text-align: left;">
+					<h2>The syntax of pseudo-elements</h2>
+						<p><pre><code class="hljs" data-trim contenteditable>
+selector:pseudo-class {
+    property:value;
+}
+					</code></pre></p>
+				</section>
+
+
+
+				<!-- Slide 8 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>::before</h1>
+				</section>
+
+
+
+				<!-- Slide 9 -->
+				<section style="text-align: left;">
+					<h2>The <strong style="color:#007ac9">::before</strong> Pseudo-element</h2>
+					<ul>
+						<li>The <strong style="color:#007ac9">::before</strong> pseudo-element can be used to insert some content before the content of an element.</li>
+						<li>The following example inserts a heart before the content of each &lt;a&gt; element:</li>
+						<p><pre><code class="hljs" data-trim contenteditable>
+/* Add a heart before links */
+a::before {
+	content: "♥";
+}
+					</code></pre></p>
+					<li>It is inline by default.</li>
+					</ul>
+				</section>
+
+
+
+			
+				<!-- Slide 10 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>::after</h1>
+				</section>
+
+
+
+				<!-- Slide 11 -->
+				<section style="text-align: left;">
+					<h2>The <strong style="color:#007ac9">::after</strong> Pseudo-element</h2>
+					<ul>
+						<li>The <strong style="color:#007ac9">::after</strong> pseudo-element can be used to insert some content after the content of an element.</li>
+						<li>The following example inserts an arrow after the content of each &lt;a&gt; element:</li>
+						<p><pre><code class="hljs" data-trim contenteditable>
+/* Add an arrow after links */
+a::after {
+	content: "→";
+}
+					</code></pre></p>
+					<li>It is inline by default.</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 12 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>::selection</h1>
+				</section>
+
+
+
+				<!-- Slide 13 -->
+				<section style="text-align: left;">
+					<h2>The <strong style="color:#007ac9">::selection</strong> Pseudo-element</h2>
+					<ul>
+						<li>The <strong style="color:#007ac9">::selection</strong> CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).</li>
+						<p><pre><code class="hljs" data-trim contenteditable>
+/* Make selected text gold on a red background */
+::selection {
+	color: gold;
+	background-color: red;
+} 
+						</code></pre></p>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 14 -->
+				<section style="text-align: left;">
+					<p>The following CSS properties can be applied to <strong style="color:#007ac9">::selection</strong>:</p>
+					<ul>
+						<li>color</li>
+						<li>background-color</li>
+						<li>cursor</li>
+						<li>caret-color</li>
+						<li>outline</li>
+						<li>text-decoration</li>
+						<li>text-emphasis-color</li>
+						<li>text-shadow</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 15 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>::placeholder</h1>
+				</section>
+
+
+
+				<!-- Slide 16 -->
+				<section style="text-align: left;">
+					<h2>The <strong style="color:#007ac9">::placeholder</strong> Pseudo-element</h2>
+					<ul>
+						<li>The <strong style="color:#007ac9">::placeholder</strong> CSS pseudo-element represents the placeholder text in an <b>&lt;input&gt;</b> or <b>&lt;textarea&gt;</b> element.</li>
+						<p><pre><code class="hljs" data-trim contenteditable>
+::placeholder {
+	color: blue;
+	font-size: 1.5em;
+}
+						</code></pre></p>
+					</ul>
+				</section>
+
+
+
+
+				<!-- Slide 17 -->
+				<section style="text-align: left;" data-transition="slide" data-background="#007ac9" data-background-transition="slide">
+					<h1>:nth-child()</h1>
+				</section>
+
+
+
+				<!-- Slide 18 -->
+				<section style="text-align: left;">
+					<h2>The <strong style="color:#007ac9">:nth-child()</strong> CSS pseudo-class</h2>
+					<ul>
+						<li>The <strong style="color:#007ac9">:nth-child()</strong> CSS pseudo-class matches elements based on their position in a group of siblings.</li>
+						<p><pre><code class="hljs" data-trim contenteditable>
+/* Selects the second &lt;li&gt; element in a list */
+li:nth-child(2) { 
+	color: lime;
+}
+
+/* Selects every fourth element
+	among any group of siblings */
+:nth-child(4n) {
+	color: lime;
+}
+						</code></pre></p>
+						<li>Learn more about this pseudo-class <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child" target="_blank">here</a></li>
+					</ul>
+				</section>
+
+
+				
+				<!-- Slide 19 -->
+				<section style="text-align: left;">
+					<h2>Vendor Prefixes</h2>
+					<ul>
+						<li>Browser vendors sometimes add prefixes to experimental or nonstandard CSS properties, so developers can experiment but changes in browser behavior don't break the code during the standards process.</li>
+						<li>Developers should wait to include the unprefixed property until browser behavior is standardized.</li>
+					</ul>
+				</section>
+
+
+
+				<!-- Slide 20 -->
+				<section style="text-align: left;">
+					<h2>Vendor Prefixes (2)</h2>
+					<p>The major browsers use the following prefixes:</p>	
+					<ul>
+						<li><strong style="color:#007ac9">-webkit-</strong> (Chrome, Safari, newer versions of Opera, almost all iOS browsers including Firefox for iOS; basically, any WebKit based browser)</li>
+						<li><strong style="color:#007ac9">-moz- </strong>(Firefox)</li>
+						<li><strong style="color:#007ac9">-o- </strong>(old pre-WebKit versions of Opera)</li>
+						<li><strong style="color:#007ac9">-ms- </strong>(Internet Explorer and Microsoft Edge)</li>
+					</ul>
+				</section>
+
+
+				<!-- Slide 21 -->
+				<section style="text-align: left;">
+					<h2>How to use the <strong style="color:#007ac9">vendor prefixes</strong></h2>
+					<ul>
+						<p><pre><code class="hljs" data-trim contenteditable>
+/* Sample usage */
+-webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-ms-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease; 
+						</code></pre></p>
+						<li>Learn more about vendor-prefixes <a href="https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix" target="_blank">here</a></li>
+						<li>When in doubt if you should use prefix or not use this great resource: <a href="https://caniuse.com/" target="_blank">Can I Use</a></li>
+					</ul>
+				</section>
+
+
+
+				
+
+				<!-- Slide 22 -->
+				<section style="text-align: left;">
+					<h1>Thank you!</h1>
+					<p>
+						<a href="#">Questions?</a> <br>
+					</p>
+				</section>
+
+			</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="assets/lib/js/head.min.js"></script>
+		<script src="assets/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				 // Transition speed
+    			transitionSpeed: 'default', // default/fast/slow
+
+				 // Enable slide navigation via mouse wheel
+    			mouseWheel: true,
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'assets/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'assets/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'assets/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
