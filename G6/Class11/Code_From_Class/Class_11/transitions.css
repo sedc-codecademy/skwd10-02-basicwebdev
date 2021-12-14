@@ -1,0 +1,62 @@
+.box {
+  background-color: darkgreen;
+  border-radius: 6px;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  margin: 10px;
+  line-height: 100px;
+  color: white;
+
+  transition-property: background-color, border-radius;
+  -webkit-transition-property: background-color, border-radius;
+  -moz-transition-property: background-color, border-radius;
+  -o-transition-property: background-color, border-radius;
+
+  transition-duration: 5s, 0.1s;
+  -webkit-transition-duration: 5s, 0.1s;
+  -moz-transition-duration: 5s, 0.1s;
+  -o-transition-duration: 5s, 0.1s;
+
+  transition-timing-function: ease, ease-in-out;
+  -webkit-transition-timing-function: ease, ease-in-out;
+  -moz-transition-timing-function: ease, ease-in-out;
+  -o-transition-timing-function: ease, ease-in-out;
+  /* transition-delay: 2s; */
+}
+
+.box:hover {
+  background-color: tomato;
+  border-radius: 50px;
+}
+
+.tansition-timing {
+  color: white;
+  background: yellowgreen;
+  height: 100px;
+  width: 100px;
+  border-radius: 6px;
+  margin: 10px;
+  transition-property: width;
+  transition-duration: 2s;
+}
+
+.div1 {
+  transition-timing-function: linear;
+}
+.div2 {
+  transition-timing-function: ease;
+}
+.div3 {
+  transition-timing-function: ease-in;
+}
+.div4 {
+  transition-timing-function: ease-out;
+}
+.div5 {
+  transition-timing-function: cubic-bezier(0, 0.16, 0.53, 2.03);
+}
+
+.tansition-timing:hover {
+  width: 400px;
+}
