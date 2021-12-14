@@ -1,0 +1,23 @@
+p::first-line {
+    color: red;
+    text-transform: uppercase;
+}
+
+p::first-letter {
+    font-size: 100px;
+    color: green;
+    float: right;
+}
+
+p::before {
+    content: 'Text in before pseudo element';
+}
+
+p::after {
+    content: 'Text after the pseudo element';
+}
+
+p::selection {
+    background-color: red;
+    color: yellow;
+}
