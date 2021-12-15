@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+		
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+.box {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+  text-align:center;
+  font-family: lato;
+  font-weight: 300;
+  box-sizing: border-box;
+  /*width:300px;*/
+
+  /*flex-basis - initial ideal size of the flex item. It is a measure*/
+  /*flex-basis:50%;*/
+  /*flex-grow - dictates how the avaiable free space between the items is spread. Is is not a measure, it is a ratio*/
+  /*flex-grow:1;*/
+  /*flex-shrink - dictates how items should shrink when there is not enought space in the container. 
+    It is not a measure, it is a ratio
+  */
+   flex-shrink: 1;
+   /*flex: flex-grow, flex-shrink, flex-basis*/
+   flex:50%
+}
+
+.box-1 {
+  background: #e51400; 
+  /*font-size: 1.3em;*/
+  /*flex-grow:1;*/
+  /*flex-shrink: 100;*/
+}
+.box-2 {
+  background: #fa6800;
+  /*font-size: 2.5em;*/
+  /*flex-grow:2;*/
+}
+.box-3 {
+  background: #f0a30a; 
+  /*order - specifies the order of the elements in the container*/
+  order:-1;
+  /*font-size: 3em;*/
+  /*align-self alows individual items to move in the flex container */
+  /*align-self: flex-end;*/
+  /*flex-grow:3;*/
+}
+.box-4 {background: #e3c800;
+    /*font-size: 0.9em;*/
+    /*flex-grow:4;*/
+ }
+.box-5 {background: #a4c400;}
+.box-6 {background: #60a917;}
+.box-7 {background: #00aba9;}
+.box-8 {background: #1ba1e2;} 
+.box-9 {background: #aa00ff;}
+
+.container{
+
+    display:flex;
+    border: 2px solid black;
+    height: 80vh;
+
+    /*flex-direction - specifies how items are places in the flex container based on the main axis*/
+    flex-direction: row;
+
+    /*flex-wrap - it moves the elements into the next row*/
+    /*flex-wrap:wrap;*/
+
+    /*justify-content - how space is distributed between items in the container along the main axes*/
+    justify-content: space-between;
+
+    /*align-items - defines how space is distibuted between items in the container along the cross axes*/
+    align-items:center;
+
+    /*align-content - defines how space is distributed between ROWS*/
+   /*align-content: space-between;*/
+}
+        </style>
+    </head>
+    <body>
+        <section class="container">
+            <div class="box box-1">1</div>
+            <div class="box box-2">2</div>
+            <div class="box box-3">3</div>
+            <div class="box box-4">4</div> 
+           <!-- <div class="box box-5">5</div>
+            <div class="box box-6">6</div>
+            <div class="box box-7">7</div>
+            <div class="box box-8">8</div>
+            <div class="box box-9">9</div>-->
+          </section>
+          
+    </body>
+</html>
